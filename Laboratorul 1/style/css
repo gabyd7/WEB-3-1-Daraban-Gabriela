@@ -56,7 +56,7 @@ button {
 
     padding: 60px 50px;
 
-    background-color: #fff3e6;
+    background-color: #fcfafa;
 }
 
 
@@ -147,7 +147,7 @@ button {
 
     text-align: center;
 
-    background-color: #f8f8f8;
+    background-color: #f8f6f6;
 
     border-radius: 10px;
 }
@@ -187,9 +187,9 @@ button {
 .recipe-card {
     width: 250px;
 
-    background-color: white;
+    background-color: rgb(248, 246, 246);
 
-    border: 1px solid #ddd;
+    border: 1px solid #fdfcfc;
 
     border-radius: 10px;
 
@@ -260,4 +260,118 @@ button {
         align-items: center;
     }
 
+}
+
+/* ================= LIGHT MODE ================= */
+
+body {
+    background: #f4f8f4;
+    color: #222;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar,
+.card,
+.recipe-card {
+    background: #ffffff;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a,
+.card p,
+.recipe-card p,
+.hero p,
+.footer p {
+    color: #444;
+    transition: color 0.3s ease;
+}
+
+.logo,
+.hero h1,
+.section-title,
+.card h2,
+.recipe-card h3 {
+    color: #2e7d32;
+}
+
+.footer {
+    background: #2e7d32;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark-mode {
+    background: #121212;
+    color: #f5f5f5;
+}
+
+body.dark-mode .navbar {
+    background: #0c0c0c;
+    box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+}
+
+body.dark-mode .logo,
+body.dark-mode .hero h1,
+body.dark-mode .section-title,
+body.dark-mode .card h2,
+body.dark-mode .recipe-card h3 {
+    color: #7bd88f;
+}
+
+body.dark-mode nav a,
+
+body.dark-mode .card p,
+body.dark-mode .recipe-card p,
+body.dark-mode .footer p {
+    color: #e4e4e4;
+}
+
+body.dark-mode .card,
+body.dark-mode .recipe-card {
+    background: #202020;
+    color: #f5f5f5;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .btn {
+    background: #43a047;
+    color: white;
+}
+
+body.dark-mode .btn-secondary {
+    border: 2px solid #7bd88f;
+    color: #040404;
+}
+
+body.dark-mode .btn-secondary:hover {
+    background: #43a047;
+    color: white;
+}
+
+body.dark-mode .footer {
+    background: z#040404;
+    color: #f5f5f5;
+}
+
+body.dark-mode #themeToggle {
+    background: #ffd54f;
+    color: #222;
+}
+
+#themeToggle {
+    background: #43a047;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+#themeToggle:hover {
+    transform: scale(1.1);
 }
