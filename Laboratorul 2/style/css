@@ -1,20 +1,20 @@
 body {
-font-family: Arial, sans-serif;
-margin: 0;
-background-color: #f2f2f2;
-color: #222;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: white;
+    color: #222;
 }
 
 header {
     text-align: center;
-    padding: 20px 0 10px;
+    padding: 10px 0;
     background: none;
     color: #222;
 }
 
 nav {
     text-align: center;
-    padding: 10px 0;
+    margin: 15px 0 25px;
     background: none;
 }
 
@@ -22,7 +22,6 @@ nav a {
     color: #1d3557;
     text-decoration: underline;
     margin: 0 10px;
-    font-weight: normal;
     font-size: 16px;
 }
 
@@ -31,28 +30,28 @@ nav a:hover {
 }
 
 .tara {
-    background: white;
-    width: 80%;
-    margin: 20px auto;
-    padding: 15px;
-    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    padding: 0;
+    background: none;
+    border: none;
     border-radius: 0;
     box-shadow: none;
+    width: 100%;
 }
 
 h2 {
-color: #1d3557;
+    color: #1d3557;
 }
 
 .steag {
-border-collapse: collapse;
-margin: 20px 0;
+    border-collapse: collapse;
+    margin: 20px 0;
 }
 
 .steag td {
-width: 45px;
-height: 35px;
-padding: 0;
+    width: 45px;
+    height: 35px;
+    padding: 0;
 }
 
 /* STEAGUL REPUBLICII MOLDOVA */
@@ -76,10 +75,6 @@ padding: 0;
     background-color: #CC092F;
 }
 
-.stema img {
-    display: block;
-    margin: auto;
-}
 
 /* STEAGUL NORVEGIEI */
 
