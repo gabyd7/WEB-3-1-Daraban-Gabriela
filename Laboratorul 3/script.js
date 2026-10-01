@@ -1,4 +1,4 @@
-// EXERCITIUL 1 - FUNCTIE DE CALCUL
+
 
 function calculateSum(a, b) {
     return a + b;
@@ -7,8 +7,6 @@ function calculateSum(a, b) {
 console.log(calculateSum(5, 3));
 console.log(calculateSum(10, 7));
 
-
-// EXERCITIUL 2 - OBIECT CU METODA
 
 const student = {
     name: "Gabriela",
@@ -27,7 +25,7 @@ student.grade = 9;
 console.log("Noua notă:", student.grade);
 
 
-// EXERCITIUL 3 - JOCUL
+
 
 const choices = ["piatra", "hartia", "foarfeca"];
 
@@ -46,8 +44,6 @@ const gameScore = {
 let rounds = 0;
 
 
-// ELEMENTELE DIN HTML
-
 const playerChoiceElement = document.getElementById("playerChoice");
 const computerChoiceElement = document.getElementById("computerChoice");
 const resultElement = document.getElementById("result");
@@ -57,17 +53,12 @@ const drawsElement = document.getElementById("draws");
 const roundsElement = document.getElementById("rounds");
 const leaderElement = document.getElementById("leader");
 
-
-// ALEGEREA CALCULATORULUI
-
 function getComputerChoice() {
     const randomIndex = Math.floor(Math.random() * choices.length);
 
     return choices[randomIndex];
 }
 
-
-// TRANSFORMA ALEGEREA IN TEXT
 
 function getChoiceName(choice) {
 
@@ -83,8 +74,6 @@ function getChoiceName(choice) {
 }
 
 
-// FUNCTIA PRINCIPALA A JOCULUI
-
 function playGame(playerChoice) {
 
     const computerChoice = getComputerChoice();
@@ -96,8 +85,6 @@ function playGame(playerChoice) {
     rounds++;
 
 
-    // EGALITATE
-
     if (playerChoice === computerChoice) {
 
         resultElement.textContent = "Egalitate!";
@@ -105,8 +92,6 @@ function playGame(playerChoice) {
         gameScore.draws++;
     }
 
-
-    // JUCATORUL CASTIGA
 
     else if (
         (playerChoice === "piatra" && computerChoice === "foarfeca") ||
@@ -120,8 +105,6 @@ function playGame(playerChoice) {
     }
 
 
-    // CALCULATORUL CASTIGA
-
     else {
 
         resultElement.textContent = "Calculatorul a câștigat!";
@@ -130,7 +113,6 @@ function playGame(playerChoice) {
     }
 
 
-    // ACTUALIZAM SCORUL
 
     gameScore.displayScore();
 
@@ -142,7 +124,6 @@ function playGame(playerChoice) {
 }
 
 
-// CINE CONDUCE
 
 function showLeader() {
 
@@ -161,7 +142,6 @@ function showLeader() {
 }
 
 
-// VERIFICAREA CELOR 5 VICTORII
 
 function checkWinner() {
 
@@ -179,7 +159,6 @@ function checkWinner() {
 }
 
 
-// JOC NOU
 
 function newGame() {
 
@@ -206,7 +185,6 @@ function newGame() {
 }
 
 
-// BUTONUL PIATRA
 
 document.getElementById("rock").addEventListener("click", function() {
 
@@ -215,16 +193,12 @@ document.getElementById("rock").addEventListener("click", function() {
 });
 
 
-// BUTONUL HARTIA
-
 document.getElementById("paper").addEventListener("click", function() {
 
     playGame("hartia");
 
 });
 
-
-// BUTONUL FOARFECA
 
 document.getElementById("scissors").addEventListener("click", function() {
 
@@ -233,6 +207,5 @@ document.getElementById("scissors").addEventListener("click", function() {
 });
 
 
-// BUTONUL JOC NOU
 
 document.getElementById("newGame").addEventListener("click", newGame);
