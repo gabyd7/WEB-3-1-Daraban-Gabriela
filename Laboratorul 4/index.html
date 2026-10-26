@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorul 4 - Array JavaScript</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        section {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .lista {
+            margin-top: 10px;
+        }
+
+        .produs {
+            margin-right: 10px;
+        }
+
+        .elev {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        #numarElevi {
+            font-weight: bold;
+        }
+
+        #rezultatCautare {
+            margin-top: 10px;
+        }
+
+
+        .informatii {
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Laboratorul 4 - Liste și metodele Array în JavaScript</h1>
+
+        <section>
+            <h2>Exercițiul 1 - Lista de fructe</h2>
+
+            <div id="fructe" class="lista"></div>
+
+            <div class="informatii">
+                <p id="primulFruct"></p>
+                <p id="ultimulFruct"></p>
+                <p id="numarFructe"></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Exercițiul 2 - Lista orașelor</h2>
+
+            <div id="orase" class="lista"></div>
+        </section>
+
+        <section>
+            <h2>Exercițiul 3 și 4 - Lista de cumpărături</h2>
+
+            <input type="text" id="produs" placeholder="Introdu produsul">
+
+            <button onclick="adaugaSfarsit()">Adaugă la sfârșit</button>
+            <button onclick="adaugaInceput()">Adaugă la început</button>
+            <button onclick="stergePrimul()">Șterge primul</button>
+            <button onclick="stergeUltimul()">Șterge ultimul</button>
+
+            <div id="listaProduse" class="lista"></div>
+        </section>
+
+        <section>
+            <h2>Exercițiul 5 - Catalog electronic</h2>
+
+            <p id="numarElevi"></p>
+
+            <h3>Adaugă un elev</h3>
+
+            <input type="text" id="nume" placeholder="Nume">
+            <input type="number" id="varsta" placeholder="Vârsta">
+            <input type="number" id="nota" placeholder="Nota" min="1" max="10">
+
+            <button onclick="adaugaElev()">Adaugă elev</button>
+
+            <br><br>
+
+            <h3>Șterge un elev</h3>
+
+            <input type="text" id="numeStergere" placeholder="Numele elevului">
+
+            <button onclick="stergeElev()">Șterge elev</button>
+
+            <br><br>
+
+            <h3>Caută un elev</h3>
+
+            <input type="text" id="numeCautare" placeholder="Numele elevului">
+
+            <button onclick="cautaElev()">Caută</button>
+
+            <div id="rezultatCautare"></div>
+
+            <br>
+
+            <h3>Catalog</h3>
+
+            <div id="catalog"></div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
