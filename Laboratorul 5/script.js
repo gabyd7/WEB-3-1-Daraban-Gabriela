@@ -1,6 +1,4 @@
 
-// Tabloul inițial de studenți
-
 let students = [
     {
         id: 1,
@@ -44,13 +42,13 @@ let students = [
     }
 ];
 
-// Selectarea elementelor HTML
+
 
 const studentsList = document.getElementById("studentsList");
 const studentCount = document.getElementById("studentCount");
 const studentForm = document.getElementById("studentForm");
 
-// Funcție pentru afișarea studenților
+
 
 function displayStudents() {
 
@@ -116,7 +114,7 @@ function displayStudents() {
 
 }
 
-// Protejarea textului introdus în formular
+
 
 function escapeHTML(text) {
     return String(text).replace(/[&<>"']/g, function(character) {
@@ -130,7 +128,7 @@ function escapeHTML(text) {
     });
 }
 
-// Adăugarea unui student prin formular
+
 
 studentForm.addEventListener("submit", function(event) {
 
@@ -171,7 +169,7 @@ studentForm.addEventListener("submit", function(event) {
 
 });
 
-// Ștergerea unui student după ID
+
 
 studentsList.addEventListener("click", function(event) {
 
@@ -189,7 +187,7 @@ studentsList.addEventListener("click", function(event) {
 
 });
 
-// Schimbarea proprietății justify-content
+
 
 const justifyButtons = document.querySelectorAll("[data-justify]");
 
@@ -211,7 +209,7 @@ justifyButtons.forEach(function(button) {
 
 });
 
-// Schimbarea proprietății align-items
+
 
 const alignItems = document.getElementById("alignItems");
 
@@ -221,7 +219,7 @@ alignItems.addEventListener("change", function() {
 
 });
 
-// Schimbarea proprietății flex-wrap
+
 
 const wrapBtn = document.getElementById("wrapBtn");
 const nowrapBtn = document.getElementById("nowrapBtn");
@@ -244,7 +242,7 @@ nowrapBtn.addEventListener("click", function() {
 
 });
 
-// Modificarea distanței dintre carduri
+
 
 const gapRange = document.getElementById("gapRange");
 const gapValue = document.getElementById("gapValue");
@@ -259,11 +257,11 @@ gapRange.addEventListener("input", function() {
 
 });
 
-// Afișarea inițială a studenților
+
 
 displayStudents();
 
-// Setarea valorilor inițiale pentru Flexbox
+
 
 studentsList.style.justifyContent = "flex-start";
 studentsList.style.alignItems = "center";
