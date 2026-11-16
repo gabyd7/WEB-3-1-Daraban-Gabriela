@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionarea studenților</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gestionarea listei de studenți</h1>
+        <p>Aranjarea cardurilor cu CSS Flexbox</p>
+    </header>
+
+    <main>
+
+        <section class="form-section">
+            <h2>Adaugă un student</h2>
+
+            <form id="studentForm">
+
+                <div class="form-grid">
+                    <input type="text" id="name" placeholder="Numele studentului" required>
+
+                    <input type="text" id="group" placeholder="Grupa" required>
+
+                    <input type="number" id="age" placeholder="Vârsta" min="14" max="100" step="1" required>
+
+                    <input type="text" id="specialty" placeholder="Specialitatea" required>
+
+                    <input type="text" id="avatar" placeholder="Avatar (emoji)" required>
+                </div>
+
+                <button type="submit" class="add-btn">Adaugă student</button>
+
+            </form>
+        </section>
+
+        <section class="controls-section">
+            <h2>Controlul cardurilor Flexbox</h2>
+
+            <div class="control-group">
+                <label>Justify-content:</label>
+
+                <div class="buttons">
+                    <button class="control-btn" data-justify="flex-start">Flex-start</button>
+                    <button class="control-btn" data-justify="center">Center</button>
+                    <button class="control-btn" data-justify="flex-end">Flex-end</button>
+                    <button class="control-btn" data-justify="space-between">Space-between</button>
+                    <button class="control-btn" data-justify="space-around">Space-around</button>
+                    <button class="control-btn" data-justify="space-evenly">Space-evenly</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="alignItems">Align-items:</label>
+
+                <select id="alignItems">
+                    <option value="stretch">Stretch</option>
+                    <option value="flex-start">Flex-start</option>
+                    <option value="center" selected>Center</option>
+                    <option value="flex-end">Flex-end</option>
+                    <option value="baseline">Baseline</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Flex-wrap:</label>
+
+                <div class="buttons">
+                    <button class="control-btn" id="wrapBtn">Wrap</button>
+                    <button class="control-btn" id="nowrapBtn">Nowrap</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="gapRange">
+                    Gap: <span id="gapValue">18</span> px
+                </label>
+
+                <input type="range" id="gapRange" min="0" max="50" value="18">
+            </div>
+        </section>
+
+        <section class="students-section">
+
+            <div class="students-header">
+                <h2>Lista studenților</h2>
+                <span id="studentCount">Studenți: 0</span>
+            </div>
+
+            <div id="studentsList" class="students-list"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Proiect realizat pentru disciplina Asistență pentru programarea client-side a site-urilor Web</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
